@@ -88,7 +88,7 @@ import config from "../config";
 import Grimstone from "grimstone";
 const grimstone = new Grimstone(config);
 
-// We call modifyCollection on a specific collection, passing it's name and our own callback function
+// We call modifyCollection on a specific collection, passing it's name and our own callback function:
 let result = await grimstone.modifyCollection("orders", modifyItem);
 
 // The callback function receives the current document. This callback should be synchronous, not async:
@@ -99,7 +99,7 @@ function modifyItem(item) {
 }
 ```
 
-In the above, we don't pass in any value except email because `mergeData` is true by default. Consider this:
+In the above, we don't pass in any value in the return object except email because `mergeData` is `true` by default. A more in-depth look at what's happening:
 
 ```js
 function modifyItem(item) {
