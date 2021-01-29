@@ -116,7 +116,8 @@ function modifyItem(item) {
   return {
     email: item.email.toLowerCase().trim(),
   };
-  /* We're telling firestore that we only want to modify the key/values in the above object. The object will be rewritten in the database as:
+  /* We're telling firestore that we only want to modify the key/values in the above
+   * object. The object will be rewritten in the database as:
    *    {
    *       email: "somerando@gmail.com",
    *       license: "XXXXXX",
@@ -143,7 +144,8 @@ function modifyItem(item) {
   return {
     email: item.email.toLowerCase().trim(),
   };
-  /* Since we're not merging (we're instead overwriting), the result in our databse will be the direct return value above:
+  /* Since we're not merging (we're instead overwriting), the result in our database
+   * will be the direct return value above:
    *    {
    *       email: "somerando@gmail.com",
    *    }
