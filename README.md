@@ -70,7 +70,7 @@ const grimstone = new Grimstone({
 
 ## **async** modifyCollection(collection, callback[, mergeData?])
 
-`grimstone.modifyCollection()` will read all items within a given collection, pass them to a callback function, then rewrite (or overwrite) the entry in the database.
+`grimstone.modifyCollection()` will read all items within a given collection, pass them to a callback function, then rewrite (or overwrite) the entry in the database. It returns an Array of the document ids which pass (or the error message paired with id whenever failing).
 
 | Param      | Type       | Default |                                                                                                                                                     Description |
 | :--------- | :--------- | :------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------: |
