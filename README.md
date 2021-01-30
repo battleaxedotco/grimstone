@@ -66,7 +66,17 @@ const grimstone = new Grimstone({
 
 ---
 
-# API
+# Functions
+
+<dl>
+<dt><a href="#async-modifycollectioncollection-callback-mergedata">modifyCollection(collection, callback[, mergeData?]</a> ⇒ <code>Array</code></dt>
+<dd><p>Mass modifies all data within a collection per returned value from a callback function</p>
+</dd>
+<dt><a href="#async-queryandmodifycollectionoptions-callback-mergedata">queryAndModifyCollection(options, callback[, mergeData?])</a> ⇒ <code>Array</code></dt>
+<dd><p>Mass modifies all query matches within a collection per returned value from a callback function</p>
+</dd>
+
+</dl>
 
 ## **async** modifyCollection(collection, callback[, mergeData?])
 
@@ -165,7 +175,7 @@ function modifyItem(item) {
 | callback  | `Function` | `null`  |                                 The callback function which receives the entry data as a parameter, then returns a result which is written back to the database |
 | mergeData | `Boolean`  | `true`  | When `true`, the callback return value is intuitively merged into the object. When `false`, the database entry is completely overwritten by the callback return |
 
-### Options object
+### `Options` supported parameters
 
 | Param         | Type     | Default |                                                              Description |
 | :------------ | :------- | :------ | -----------------------------------------------------------------------: |
