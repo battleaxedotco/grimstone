@@ -86,7 +86,7 @@ class Grimstone {
       results = results.docs;
     }
     return Promise.all(
-      results.docs?.map((result) => {
+      results.docs.map((result) => {
         let dataMerge = callback(result.data());
         return this.db
           .collection(opts.collection)
