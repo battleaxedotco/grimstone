@@ -21,7 +21,7 @@ class Grimstone {
       console.error(`Collection of name ${collection} does not exist`);
       return null;
     }
-    let results = await this.getCollection(collection);
+    let results = await this.getCollection(collection, 2);
     return Promise.all(
       results.map((result) => {
         let dataMerge = callback(result.data());
