@@ -21,7 +21,7 @@ class Grimstone {
       console.error(`Collection of name ${collection} does not exist`);
       return null;
     }
-    let results = await this.getCollection(collection, 2);
+    let results = await this.getCollection(collection);
     return Promise.all(
       results.map((result) => {
         let dataMerge = callback(result.data());
@@ -41,6 +41,7 @@ class Grimstone {
   async collectionExists(collection) {
     return await this.db
       .collection(collection)
+      .limit(2)
       .get()
       .then((snapshot) => {
         return snapshot.docs.length > 0;
