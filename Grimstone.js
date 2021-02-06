@@ -84,7 +84,7 @@ class Grimstone {
       if (opts.orderByValue) results = results.orderByValue(opts.orderByValue);
       if (opts.limit) results = results.limit(opts.limit);
       results = await results.get();
-      results = results.docs;
+      // results = results.docs;
     }
     return Promise.all(
       results.docs.map((result) => {
